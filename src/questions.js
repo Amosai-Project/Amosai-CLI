@@ -1,14 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 
-const choices = fs.readdirSync(path.join(__dirname, 'templates'));
+const choicesTemplate = fs.readdirSync(path.join(__dirname, 'templates'));
 
 export default [
   {
     name: 'template',
     type: 'list',
     message: 'What project template would you like to generate?',
-    choices: choices,
+    choices: choicesTemplate,
   },
   {
     name: 'name',

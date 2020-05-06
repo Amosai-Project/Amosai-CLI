@@ -28,6 +28,7 @@ export const runTasks = async ({ name, template, git }) => {
       task: () =>
         projectInstall({
           cwd: projectPath,
+          prefer: 'npm',
         }),
     },
   ]);
