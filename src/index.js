@@ -4,13 +4,13 @@ require('yargs')
   .help('h')
   .alias('h', 'help').argv;
 import inquirer from 'inquirer';
-import clear from 'clear';
 
+import './welcomeMessage';
 import questions from './questions';
 import { runTasks } from './tasks';
+import { finalMessage } from './finalMessage';
 
 inquirer.prompt(questions).then(async (answers) => {
-  clear();
   await runTasks(answers);
-  console.log('Done!');
+  finalMessage(answers);
 });
