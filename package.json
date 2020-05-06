@@ -1,0 +1,44 @@
+{
+  "name": "amosai-cli",
+  "version": "1.0.0",
+  "description": "Generate JS projects templates we use",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Amosai-Project/amosai-cli.git",
+  "author": "Santiago Carrasco <jsanticc@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "build": "babel src -d dist -s",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "update": "ncu -u && yarn",
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "amosai",
+    "create-project"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.1.0",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3",
+    "npm-check-updates": "^4.1.2"
+  }
+}
