@@ -15,4 +15,9 @@ export default [
     type: 'input',
     message: 'Project name:',
   },
+  {
+    name: 'git',
+    type: 'confirm',
+    message: 'Initialize Git on this project?',
+  },
 ];
