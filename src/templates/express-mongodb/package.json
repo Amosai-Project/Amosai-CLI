@@ -1,0 +1,21 @@
+{
+  "name": "express-server",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "clean": "rimraf dist",
+    "update": "ncu -u && npm i"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "npm-check-updates": "^4.1.2"
+  }
+}
